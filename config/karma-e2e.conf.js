@@ -10,8 +10,9 @@ files = [
 	JASMINE_ADAPTER,
 	ANGULAR_SCENARIO,
 	ANGULAR_SCENARIO_ADAPTER,
-	'test/e2e/**/*.js',
-    'test/mocks/**/*.js'
+    'app/components/jquery/jquery.js',
+    'app/mocks/app.js',
+	'test/e2e/**/*.js'
 ];
 
 // Needs to match the port on which the grunt connect task launches the server
