@@ -53,11 +53,3 @@ window.cabernet = {
   grape      : 'cabernet savignon',
   region     : 'france'
 };
-
-
-angular.module('winezeusApp')
-  .run(function($httpBackend, backendUrl) {
-    $httpBackend.whenGET(/views\/.*/).passThrough();
-    $httpBackend.whenGET(backendUrl + '/wines.json/pinot-noir').respond(pinotNoir);
-    $httpBackend.whenGET(backendUrl + '/wines.json/cabernet').respond(cabernet);
-  });
