@@ -1,0 +1,200 @@
+$img-width: .40;
+$grey: #aea7a5;
+$g1: #fcfbf9;
+$g2: #ebe9e9;
+$winebg: #efeeec;
+$pad: 10%;
+$break-color: #ebe9e9;
+$pink: #d11241;
+$section-border: 1px solid $break-color;
+
+.top {
+  background: $winebg;
+  width:      100%;
+  height:     ($img-width*640*3.27 - 50px);
+
+  img {
+    width:    $img-width*100%;
+    margin:   3em 0 0 0;
+    padding:  0;
+    position: relative;
+    top:      0;
+    left:     0;
+  }
+
+  .back {
+    -webkit-font-smoothing: auto;
+    font-size:              12rem;
+    position:               relative;
+    top:                    0.4em;
+    left:                   0.3em;
+  }
+
+  .top-left {
+    width:          55%;
+    margin:         0;
+    display:        inline-block;
+    vertical-align: top;
+  }
+
+  .info {
+    margin: 24em 0 0 0;
+  }
+
+  .year,
+  h1 {
+    padding-left: $pad;
+  }
+
+  .year {
+    font-family: proxima-nova;
+    font-size:   2.75rem;
+    font-weight: 400;
+  }
+
+  h1 {
+    margin:      0;
+    font-weight: 300;
+    font-size:   4rem;
+  }
+}
+
+.bottom {
+  background: linear-gradient(180deg, $g1 0%, $g2 15rem);
+  background: -webkit-linear-gradient($g1 0%, $g2 15rem);
+  padding:    9em 0;
+
+  .compare {
+    text-transform: uppercase;
+    color:          $grey;
+    font-size:      2.25rem;
+    font-family:    proxima-nova;
+    font-weight:    400;
+    letter-spacing: 0.125em;
+
+    &>* {
+      display:        inline-block;
+      vertical-align: middle;
+
+      &:first-child {
+        width:   83%;
+        padding: 1em 0;
+      }
+
+      &:last-child {
+        font-size:  3rem;
+        width:      15%;
+        text-align: right;
+      }
+    }
+  }
+
+  .right {
+    width: 38%;
+
+    h2,
+    h3 {
+      width:      100%;
+      text-align: center;
+    }
+  }
+
+  .section,
+  .section td {
+    border-bottom:   $section-border;
+    border-collapse: collapse;
+    //padding:       $pad/4;
+    padding:         1.5rem;
+  }
+
+  .section td { padding: 0.75em 1.5rem; }
+  .tannins td { border: 0; }
+
+  h2 {
+    padding:        0;
+    margin:         0 0 .5em 0;
+    display:        inline-block;
+    font-size:      4rem;
+    color:          $pink;
+    text-transform: uppercase;
+    font-family:    din;
+    font-weight:    300;
+  }
+
+  .fruit-type-description {
+    font-size:   2rem;
+    margin-left: 1em;
+  }
+
+  h3 {
+    margin:         0;
+    text-transform: lowercase;
+    font-size:      1.75rem;
+    font-weight:    400;
+    font-family:    proxima-nova;
+    letter-spacing: 0.2em;
+    color:          $grey;
+    text-align:     left;
+  }
+
+  .taste-card-headers {
+    display: inline-block;
+    width:   25%;
+  }
+
+  h4 {
+  }
+
+  .body,
+  .dry-sweet,
+  .acidity,
+  .tannins {
+    font-size:      3rem;
+    text-align:     center;
+    font-family:    din;
+    text-transform: uppercase;
+    color:          $grey;
+  }
+
+  .highlight { color: $pink; }
+
+  .taste-card,
+  .origin-card {
+    margin:           0 $pad/4;
+    background-color: #fff;
+  }
+
+  .origin-card {
+    margin-bottom: 5rem;
+
+    table {
+      border-collapse: collapse;
+
+      td {
+        padding:         1.5rem;
+        border-collapse: collapse;
+        border:          $section-border;
+      }
+    }
+  }
+
+  li {
+    display:         inline;
+    list-style-type: none;
+  }
+
+  .properties {
+    margin:  0;
+    padding: 0;
+
+    li:after {
+      content:   ' + ';
+      font-size: 3rem;
+      color:     $pink;
+    }
+
+    li:last-child:after {
+      content: '';
+    }
+  }
+}
