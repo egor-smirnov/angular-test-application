@@ -46,7 +46,7 @@ window.cabernet = {
     description: 'black cherry'
   },
   body       : 'heavy',
-  dry_sweet  : 'moderate',
+  dry_sweet  : 'off dry',
   acidity    : 'not acidic',
   tannins    : 'not tannic',
   style      : 'light/gentle',
