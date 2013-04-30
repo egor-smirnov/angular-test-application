@@ -1,0 +1,131 @@
+.top {
+  background: #efeeec;
+  width: 100%;
+  height: 787.12px; }
+  .top img {
+    width: 40%;
+    margin: 3em 0 0 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0; }
+  .top .back {
+    -webkit-font-smoothing: auto;
+    font-size: 12rem;
+    position: relative;
+    top: 0.4em;
+    left: 0.3em; }
+  .top .top-left {
+    width: 55%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top; }
+  .top .info {
+    margin: 24em 0 0 0; }
+  .top .year,
+  .top h1 {
+    padding-left: 10%; }
+  .top .year {
+    font-family: proxima-nova;
+    font-size: 2.75rem;
+    font-weight: 400; }
+  .top h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 4rem; }
+
+.bottom {
+  background: linear-gradient(180deg, #fcfbf9 0%, #ebe9e9 15rem);
+  background: -webkit-linear-gradient(#fcfbf9 0%, #ebe9e9 15rem);
+  padding: 9em 0; }
+  .bottom .compare {
+    text-transform: uppercase;
+    color: #aea7a5;
+    font-size: 2.25rem;
+    font-family: proxima-nova;
+    font-weight: 400;
+    letter-spacing: 0.125em; }
+    .bottom .compare > * {
+      display: inline-block;
+      vertical-align: middle; }
+      .bottom .compare > *:first-child {
+        width: 83%;
+        padding: 1em 0; }
+      .bottom .compare > *:last-child {
+        font-size: 3rem;
+        width: 15%;
+        text-align: right; }
+  .bottom .right {
+    width: 38%; }
+    .bottom .right h2,
+    .bottom .right h3 {
+      width: 100%;
+      text-align: center; }
+  .bottom .section,
+  .bottom .section td {
+    border-bottom: 1px solid #ebe9e9;
+    border-collapse: collapse;
+    padding: 1.5rem; }
+  .bottom .section td {
+    padding: 0.75em 1.5rem; }
+  .bottom .tannins td {
+    border: 0; }
+  .bottom h2 {
+    padding: 0;
+    margin: 0 0 .5em 0;
+    display: inline-block;
+    font-size: 4rem;
+    color: #d11241;
+    text-transform: uppercase;
+    font-family: din;
+    font-weight: 300; }
+  .bottom .fruit-type-description {
+    font-size: 2rem;
+    margin-left: 1em; }
+  .bottom h3 {
+    margin: 0;
+    text-transform: lowercase;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: proxima-nova;
+    letter-spacing: 0.2em;
+    color: #aea7a5;
+    text-align: left; }
+  .bottom .taste-card-headers {
+    display: inline-block;
+    width: 25%; }
+  .bottom .body,
+  .bottom .dry-sweet,
+  .bottom .acidity,
+  .bottom .tannins {
+    font-size: 3rem;
+    text-align: center;
+    font-family: din;
+    text-transform: uppercase;
+    color: #aea7a5; }
+  .bottom .highlight {
+    color: #d11241; }
+  .bottom .taste-card,
+  .bottom .origin-card {
+    margin: 0 2.5%;
+    background-color: #fff; }
+  .bottom .origin-card {
+    margin-bottom: 5rem; }
+    .bottom .origin-card table {
+      border-collapse: collapse; }
+      .bottom .origin-card table td {
+        padding: 1.5rem;
+        border-collapse: collapse;
+        border: 1px solid #ebe9e9; }
+  .bottom li {
+    display: inline;
+    list-style-type: none; }
+  .bottom .properties {
+    margin: 0;
+    padding: 0; }
+    .bottom .properties li:after {
+      content: ' + ';
+      font-size: 3rem;
+      color: #d11241; }
+    .bottom .properties li:last-child:after {
+      content: ''; }
