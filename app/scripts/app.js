@@ -1,16 +1,30 @@
 'use strict';
 
-var App = angular.module('winezeusApp', ['ngMockE2E'])
-  .config(
-    //If you're thinking outside (which you should be), u'll probably want to start here ^^
-    // Good Luck!
-  )
+var winezeusApp = angular.module('winezeusApp', ['winezeusAppServices', 'ngMockE2E'])
 
-  .value('backendUrl', 'http://localhost:3000');
+    .config(['$routeProvider', function ($routeProvider) {
+
+        $routeProvider.
+            when('/:wineName', {
+                templateUrl: 'views/wineDetail.html',
+                controller: WineDetailsController
+            }).
+            when('/wines/:wineName', {
+                templateUrl: 'views/wineDetail.html',
+                controller: WineDetailsController
+            }).
+            otherwise({
+                redirectTo: '/pinot-noir'}
+        );
+    }])
+
+    .value('backendUrl', 'http://localhost:3000');
 
 
-App.run(function ($httpBackend, backendUrl) {
+angular.module('winezeusApp')
+    .run(['$httpBackend', 'backendUrl', function($httpBackend, backendUrl) {
+
         $httpBackend.whenGET(/views\/.*/).passThrough();
         $httpBackend.whenGET(backendUrl + '/wines.json/pinot-noir').respond(pinotNoir);
         $httpBackend.whenGET(backendUrl + '/wines.json/cabernet').respond(cabernet);
-    });
+    }]);
