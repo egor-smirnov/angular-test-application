@@ -42,7 +42,7 @@
             });
 
             it('should show the price', function () {
-                expect(element('.price').text()).toBe(obj.wine.price);
+                expect(element('.price').text()).toBe('$' + obj.wine.price);
             });
 
             it('should show the wine properties', function () {
