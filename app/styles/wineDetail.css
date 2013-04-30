@@ -79,6 +79,8 @@
     text-transform: uppercase;
     font-family: din;
     font-weight: 300; }
+  .bottom .fruit-type-name {
+    min-width: 200px; }
   .bottom .fruit-type-description {
     font-size: 2rem;
     margin-left: 1em; }

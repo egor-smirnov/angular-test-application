@@ -121,6 +121,10 @@ $section-border: 1px solid $break-color;
     font-weight:    300;
   }
 
+  .fruit-type-name {
+    min-width: 200px;
+  }
+
   .fruit-type-description {
     font-size:   2rem;
     margin-left: 1em;
