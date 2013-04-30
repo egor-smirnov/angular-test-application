@@ -31,14 +31,11 @@ describe('winezeusApp controllers', function () {
 
     describe('WineDetailsController', function () {
 
-        var scope, ctrl,
-            cabernetData = function () {
-                return window.cabernet;
-            };
+        var scope, ctrl, cabernetData = window.cabernet;
 
         beforeEach(inject(function ($rootScope, $routeParams, $controller, backendUrl) {
 
-            $httpBackend.expectGET(backendUrl + '/wines.json/cabernet').respond(cabernetData());
+            $httpBackend.expectGET(backendUrl + '/wines.json/cabernet').respond(cabernetData);
 
             $routeParams.wineName = 'cabernet';
 
@@ -53,7 +50,7 @@ describe('winezeusApp controllers', function () {
 
             $httpBackend.flush();
 
-            expect(scope.wine).toEqualData(cabernetData());
+            expect(scope.wine).toEqualData(cabernetData);
         });
     });
 });

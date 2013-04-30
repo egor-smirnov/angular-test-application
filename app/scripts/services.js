@@ -17,6 +17,8 @@ var WineService = (function () {
 
     WineService.prototype.get = function(wineName, successFn) {
 
+        successFn = successFn || function() {};
+
         return this.$http.get(this.backendUrl + '/wines.json/' + wineName)
             .success(function (response) {
 
