@@ -3,16 +3,16 @@
         <div class="top-left">
             <div class="back icon-arrow-left"></div>
             <div class="info">
-                <h3 class="year">Wine Year</h3>
+                <h3 class="year">{{wine.year}}</h3>
 
-                <h1 class="producer">Wine Producer</h1>
+                <h1 class="producer">{{wine.producer}}</h1>
 
-                <h1 class="name">Wine Name</h1>
+                <h1 class="name">{{wine.name}}</h1>
 
-                <h1 class="price"><span class="dollar">$</span>Wine Price</h1>
+                <h1 class="price"><span class="dollar">$</span>{{wine.price}}</h1>
             </div>
         </div>
-        <img class="wine-image" src="http://placehold.it/300x980" alt="Wine Image"/>
+        <img class="wine-image" ng-src="{{wine.image.url}}" alt="Wine Image"/>
     </div>
     <div class="bottom">
         <div class="origin-card">
@@ -21,19 +21,19 @@
                     <td>
                         <h3>style</h3>
 
-                        <h2 class="style">Wine Style</h2>
+                        <h2 class="style">{{wine.style}}</h2>
                     </td>
                     <td class="right" rowspan='2'>
                         <h3>from</h3>
 
-                        <h2 class="region">Wine Region</h2>
+                        <h2 class="region">{{wine.region}}</h2>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <h3>grape</h3>
 
-                        <h2 class="grape">Wine Grape</h2>
+                        <h2 class="grape">{{wine.grape}}</h2>
                     </td>
                 </tr>
                 <tr>
@@ -48,42 +48,42 @@
             <div class="section">
                 <h3>grape</h3>
 
-                <h2 class="fruit-type-name">Fruit Type</h2>
+                <h2 class="fruit-type-name">{{wine.fruitType.name}}</h2>
 
-                <h2 class="fruit-type-description">Description of Fruit Type</h2>
+                <h2 class="fruit-type-description">{{wine.fruitType.description}}</h2>
             </div>
             <div class="section">
                 <h3>aromas/flavors</h3>
                 <ul class="properties">
-                    <li>
-                        <h2>Sample Property</h2>
+                    <li ng-repeat="property in wine.properties">
+                        <h2>{{property}}</h2>
                     </li>
                 </ul>
             </div>
             <table class="full-width">
                 <tr class="section body">
                     <td><h3>body</h3></td>
-                    <td>light</td>
-                    <td>medium</td>
-                    <td>heavy</td>
+                    <td ng-class="{highlight : wine.body == 'light'}">light</td>
+                    <td ng-class="{highlight : wine.body == 'medium'}">medium</td>
+                    <td ng-class="{highlight : wine.body == 'heavy'}">heavy</td>
                 </tr>
                 <tr class="section dry-sweet">
                     <td><h3>dry/sweet</h3></td>
-                    <td>dry</td>
-                    <td>off dry</td>
-                    <td>sweet</td>
+                    <td ng-class="{highlight : wine.dry_sweet == 'dry'}">dry</td>
+                    <td ng-class="{highlight : wine.dry_sweet == 'off dry'}">off dry</td>
+                    <td ng-class="{highlight : wine.dry_sweet == 'sweet'}">sweet</td>
                 </tr>
                 <tr class="section acidity">
                     <td><h3>acidity</h3></td>
-                    <td>not acidic</td>
-                    <td>moderate</td>
-                    <td>fresh/lively</td>
+                    <td ng-class="{highlight : wine.acidity == 'not acidic'}">not acidic</td>
+                    <td ng-class="{highlight : wine.acidity == 'moderate'}">moderate</td>
+                    <td ng-class="{highlight : wine.acidity == 'fresh/lively'}">fresh/lively</td>
                 </tr>
                 <tr class="section tannins">
                     <td><h3>tannins</h3></td>
-                    <td>not tannic</td>
-                    <td>moderate</td>
-                    <td>gripping</td>
+                    <td ng-class="{highlight : wine.tannins == 'not tannic'}">not tannic</td>
+                    <td ng-class="{highlight : wine.tannins == 'moderate'}">moderate</td>
+                    <td ng-class="{highlight : wine.tannins == 'gripping'}">gripping</td>
                 </tr>
             </table>
         </div>
