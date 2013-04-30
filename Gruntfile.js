@@ -284,6 +284,11 @@ module.exports = function (grunt) {
         'karma:unit'
     ]);
 
+    grunt.registerTask('unit_watch', [
+        'clean:server', ,
+        'karma:unit_watch'
+    ]);
+
     grunt.registerTask('e2e', [
         'clean:server',
         'connect:e2e',

@@ -10,9 +10,9 @@ files = [
 	JASMINE_ADAPTER,
 	'app/components/angular/angular.js',
 	'app/components/angular-mocks/angular-mocks.js',
+    'app/mocks/app.js',
     'app/scripts/*.js',
     'app/scripts/**/*.js',
-    'test/mocks/**/*.js',
     'test/spec/**/*.js'
 ];
 
@@ -51,4 +51,4 @@ browsers = ['Chrome'];
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit
-singleRun = true;
+singleRun = false;
