@@ -14,19 +14,22 @@
             browser().navigateTo('/index.html#/' + obj.path);
         });
 
-//    TODO: fix this test! (this ia a todo for @bryanchriswhite... bonus point be unto you however, if you can fix it!)
-//  describe('back button', function() {
-//    beforeEach(function() {
-//      browser().navigateTo('../../index.html#/wines?scope=staff-picks');
-//      browser().navigateTo('../../index.html#/wines/pinot-noir');
-//
-//    });
-//
-//    it('should go back to the wine list page', function() {
-//      element('.back').click();
-//      expect(browser().location().url()).toBe('/wines?scope=staff-picks');
-//    });
-//  });
+
+    //TODO: fix this test! (this ia a todo for @bryanchriswhite... bonus point be unto you however, if you can fix it!)
+
+        describe('back button', function () {
+
+            beforeEach(function () {
+                browser().navigateTo('../../index.html#/wines%3Fscope=staff-picks');
+                browser().navigateTo('../../index.html#/wines/pinot-noir');
+
+            });
+
+            it('should go back to the wine list page', function () {
+                element('.back').click();
+                expect(browser().location().url()).toBe('/wines%3Fscope=staff-picks');
+            });
+        });
 
         describe('basic wine info', function () {
             it('should show the year', function () {

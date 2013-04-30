@@ -53,4 +53,24 @@ describe('winezeusApp controllers', function () {
             expect(scope.wine).toEqualData(cabernetData);
         });
     });
+
+    describe('WineListController', function () {
+
+        var scope, ctrl, respondData = [
+                {'link': 'pinot-noir', 'data': window.pinotNoir},
+                {'link': 'cabernet', 'data': window.cabernet}
+            ];
+
+        beforeEach(inject(function ($rootScope, $routeParams, $controller, backendUrl) {
+
+            scope = $rootScope.$new();
+            ctrl = $controller(WineListController, {$scope: scope});
+        }));
+
+
+        it('should fetch wine list', function () {
+
+            expect(scope.wines).toEqualData(respondData);
+        });
+    });
 });

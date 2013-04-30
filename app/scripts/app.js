@@ -5,17 +5,21 @@ var winezeusApp = angular.module('winezeusApp', ['winezeusAppServices', 'ngMockE
     .config(['$routeProvider', function ($routeProvider) {
 
         $routeProvider.
-            when('/:wineName', {
-                templateUrl: 'views/wineDetail.html',
-                controller: WineDetailsController
+            when('/wines?scope=staff-picks', {
+                templateUrl: 'views/wineList.html',
+                controller: WineListController
             }).
             when('/wines/:wineName', {
                 templateUrl: 'views/wineDetail.html',
                 controller: WineDetailsController
             }).
+            when('/:wineName', {
+                templateUrl: 'views/wineDetail.html',
+                controller: WineDetailsController
+            }).
             otherwise({
-                redirectTo: '/pinot-noir'}
-        );
+                redirectTo: '/pinot-noir'
+            });
     }])
 
     .value('backendUrl', 'http://localhost:3000');

@@ -1,0 +1,15 @@
+<div>
+    <div class="top" ng-repeat="wine in wines">
+        <div class="top-left">
+            <div class="info">
+                <h3 class="year">Click on image to view</h3>
+
+                <h1 class="name">{{wine.data.name}}</h1>
+
+                <h3 class="year">This is our staff pick!</h3>
+
+            </div>
+        </div>
+        <a href="#/wines/{{wine.link}}"><img class="wine-image" ng-src="{{wine.data.image.url}}" alt="Wine Image"/></a>
+    </div>
+</div>

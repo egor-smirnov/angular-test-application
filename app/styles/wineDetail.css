@@ -14,7 +14,8 @@
     font-size: 12rem;
     position: relative;
     top: 0.4em;
-    left: 0.3em; }
+    left: 0.3em;
+    cursor: pointer; }
   .top .top-left {
     width: 55%;
     margin: 0;
