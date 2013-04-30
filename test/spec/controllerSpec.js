@@ -2,6 +2,8 @@
 
 describe('winezeusApp controllers', function () {
 
+    var $httpBackend;
+
     beforeEach(function () {
         this.addMatchers({
             toEqualData: function (expected) {
@@ -16,17 +18,26 @@ describe('winezeusApp controllers', function () {
         })
     );
 
+    beforeEach(inject(function ($injector) {
+
+        $httpBackend = $injector.get('$httpBackend');
+    }));
+
+    afterEach(function () {
+
+        $httpBackend.verifyNoOutstandingExpectation();
+        $httpBackend.verifyNoOutstandingRequest();
+    });
+
     describe('WineDetailsController', function () {
 
-        var scope, $httpBackend, ctrl,
+        var scope, ctrl,
             cabernetData = function () {
                 return window.cabernet;
             };
 
+        beforeEach(inject(function ($rootScope, $routeParams, $controller, backendUrl) {
 
-        beforeEach(inject(function (_$httpBackend_, $rootScope, $routeParams, $controller, backendUrl) {
-
-            $httpBackend = _$httpBackend_;
             $httpBackend.expectGET(backendUrl + '/wines.json/cabernet').respond(cabernetData());
 
             $routeParams.wineName = 'cabernet';
