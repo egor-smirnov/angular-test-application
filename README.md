@@ -14,7 +14,7 @@
 
 ## Additional notes
 
-1) Instead of testacular now used karma (that si just rename, but old testacular is unavailable currently).
+1) Instead of testacular now karma is used (that is just rename, but old testacular is unavailable currently in npm).
 
 2) I have separated actual mocks (`app/mocks/app.js`) and $httpBackend initialization (now it's in `app/scripts/app.js`) - this was done due to problems with e2e tests.
 
